@@ -8,23 +8,28 @@
 </head>
 <body>
 
-<div class="container">
-    <h1>Uji Hafalan 100 digit π</h1>
-    <p>Masukkan digit π sampai sejauh yang kamu hafal!</p>
-    <input type="text" id="piInput" placeholder="Contoh: 3.1415..." value="3." maxlength="102" autofocus>
-    <br>
-    <div class="containerButton">
-        <button onclick="cekPi()">Cek Hafalan</button>
-        <button class="hide" onclick="hideClue()">Hide Clue</button>
-        <button onclick="refreshPage()">Reload</button>
+<div class="wrapper">
+
+    <div class="container">
+        <h1>Uji Hafalan 100 digit π</h1>
+        <p>Masukkan digit π sampai sejauh yang kamu hafal!</p>
+        <input type="text" id="piInput" placeholder="Contoh: 3.1415..." value="3." maxlength="102" autofocus>
+        <br>
+        <div class="containerButton">
+            <button onclick="cekPi()">Cek Hafalan</button>
+            <button class="hide" onclick="hideClue()">Hide Clue</button>
+            <button onclick="refreshPage()">Reload</button>
+        </div>
+        <div class="feedback" id="feedback"></div>
     </div>
-    <div class="feedback" id="feedback"></div>
+    
+    <div class="resultArea">
+        <div class="khusus3">3.</div>
+        <div class="belakangKoma"></div>
+    </div>
+
 </div>
 
-<div class="resultArea">
-    <div class="khusus3">3.</div>
-    <div class="belakangKoma"></div>
-</div>
 
 
 
