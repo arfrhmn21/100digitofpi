@@ -20,7 +20,7 @@ body {
 
 .wrapper {
   display: flex;
-  flex-direction: column; /* biar atas-bawah */
+  flex-direction: row; /* biar atas-bawah */
   align-items: center;
   gap: 20px;
   padding: 15px;
@@ -141,6 +141,7 @@ button:active {
   text-align: left;
   line-height: 1.6;
   word-wrap: break-word;
+  /* user-select: none; */
 }
 
 /* 🌟 Responsif */
@@ -171,5 +172,8 @@ button:active {
   .container, .resultArea {
     max-width: 100%;
     height: auto;
+  }
+  .wrapper {
+    flex-direction: column;
   }
 }
