@@ -10,7 +10,6 @@ const piInput = document.getElementById("piInput");
 let output = "";
 let count = 0;
 
-// 🔹 awalnya input dikunci
 piInput.disabled = true;
 
 for (let i = 2; i < piDigits.length; i++) {
@@ -24,7 +23,6 @@ for (let i = 2; i < piDigits.length; i++) {
 
 belakangKoma.innerHTML = output;
 
-// awalnya tombol cek juga disabled
 document.querySelectorAll("button")[0].disabled = true;
 
 function cekPi() {
@@ -81,23 +79,16 @@ piInput.addEventListener("input", function () {
 function hideClue() {
   resultArea.style.opacity = 0;
   hideButton.style.display = "none";
-
-  // 🔹 aktifkan input + tombol cek
+    
   piInput.disabled = false;
   document.querySelectorAll("button")[0].disabled = false;
 
-  // langsung fokus ke input biar enak
   piInput.focus();
 }
 
-// 🔹 disable klik kanan
-// document.addEventListener("contextmenu", event => event.preventDefault());
-
-// 🔹 disable copy & cut
 document.addEventListener("copy", event => event.preventDefault());
 document.addEventListener("cut", event => event.preventDefault());
 
-// 🔹 disable shortcut CTRL+U (view source), CTRL+C, CTRL+A
 document.addEventListener("keydown", function (event) {
     if ((event.ctrlKey && (event.key === "u" || event.key === "U")) ||  // ctrl+u
         (event.ctrlKey && (event.key === "a" || event.key === "A")) ||  // ctrl+a
@@ -107,5 +98,5 @@ document.addEventListener("keydown", function (event) {
 });
 
 function refreshPage() {
-    window.location.reload(); // reload halaman
+    window.location.reload();
 }
